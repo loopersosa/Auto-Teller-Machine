@@ -1,0 +1,365 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Cout.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Cout.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Cout"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Cout
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\BUNZ.vhd" into library work
+Parsing entity <bunz>.
+Parsing architecture <Behavioral> of entity <bunz>.
+Parsing VHDL file "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" into library work
+Parsing entity <Cout>.
+Parsing architecture <Behavioral> of entity <cout>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Cout> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <bunz> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 77: res should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 87: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 91: multiply20 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 97: multiply20 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 103: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 109: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 115: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 118: balance should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" Line 74: Assignment to cash_amount_before_dff ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" line 47. All outputs of instance <unit_bounce_center> of block <bunz> are unconnected in block <Cout>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Cout>.
+    Related source file is "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd".
+INFO:Xst:3210 - "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\Cout.vhd" line 47: Output port <s_out> of the instance <unit_bounce_center> is unconnected or connected to loadless signal.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_20_OUT<10:0>> created at line 118.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cash_amount_after_dff<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <c_out_active>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <NP>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <INS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 9-bit comparator greater for signal <PWR_5_o_cash_amount_after_dff[8]_LessThan_16_o> created at line 103
+    Found 9-bit comparator greater for signal <cash_amount_after_dff[8]_PWR_5_o_LessThan_19_o> created at line 115
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  40 Multiplexer(s).
+Unit <Cout> synthesized.
+
+Synthesizing Unit <bunz>.
+    Related source file is "C:\Users\Desktop\OneDrive\Desktop\Final VHDL\Cout\BUNZ.vhd".
+    Found 8-bit register for signal <x>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <bunz> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 11-bit subtractor                                     : 1
+# Registers                                            : 4
+ 8-bit register                                        : 4
+# Latches                                              : 24
+ 1-bit latch                                           : 24
+# Comparators                                          : 2
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 40
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <res> (without init value) has a constant value of 1 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c_out_active> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 11-bit subtractor                                     : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Comparators                                          : 2
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 40
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <res> (without init value) has a constant value of 1 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c_out_active> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_0> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_1> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_2> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_3> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_5> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_6> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_4> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_7> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_8> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_9> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <new_balance_10> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_0> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INS> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_1> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_2> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_3> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_4> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_5> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_6> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_7> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cash_amount_after_dff_8> (without init value) has a constant value of 0 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NP> (without init value) has a constant value of 1 in block <Cout>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Cout> ...
+
+Optimizing unit <bunz> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Cout, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Cout.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 15
+#      OBUF                        : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  15  out of    232     6%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.87 secs
+ 
+--> 
+
+Total memory usage is 4485800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   60 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
