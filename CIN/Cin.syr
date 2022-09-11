@@ -1,0 +1,681 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Reading design: Cin.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Cin.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Cin"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Cin
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\ayroz\Desktop\team\meht\piso.vhd" into library work
+Parsing entity <store_data>.
+Parsing architecture <Behavioral> of entity <store_data>.
+Parsing VHDL file "C:\Users\ayroz\Desktop\team\meht\BUNZ.vhd" into library work
+Parsing entity <bunz>.
+Parsing architecture <Behavioral> of entity <bunz>.
+Parsing VHDL file "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" into library work
+Parsing entity <Cin>.
+Parsing architecture <Behavioral> of entity <cin>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Cin> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 34: Assignment to c_in_active ignored, since the identifier is never used
+
+Elaborating entity <bunz> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <store_data> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 95: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 99: cash_amount_after_dff should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 93: Assignment to reset_1 ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 122: timer_3_seconds should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 123: new_balance_check should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 131: new_balance_check should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 135: timer_3_seconds should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" Line 120: Assignment to reset_1 ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" line 54. All outputs of instance <unit_bounce_center> of block <bunz> are unconnected in block <Cin>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Cin>.
+    Related source file is "C:\Users\ayroz\Desktop\team\meht\Cin.vhd".
+WARNING:Xst:647 - Input <c_in_input> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\ayroz\Desktop\team\meht\Cin.vhd" line 54: Output port <s_out> of the instance <unit_bounce_center> is unconnected or connected to loadless signal.
+    Found 8-bit adder for signal <cash_amount_before_dff> created at line 79.
+    Found 11-bit adder for signal <new_balance_check> created at line 119.
+    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_22_OUT<7:0>> created at line 135.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <timer_3_seconds<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <new_balance<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit comparator greater for signal <PWR_5_o_new_balance_check[10]_LessThan_19_o> created at line 123
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  20 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <Cin> synthesized.
+
+Synthesizing Unit <bunz>.
+    Related source file is "C:\Users\ayroz\Desktop\team\meht\BUNZ.vhd".
+    Found 8-bit register for signal <x>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <bunz> synthesized.
+
+Synthesizing Unit <store_data>.
+    Related source file is "C:\Users\ayroz\Desktop\team\meht\piso.vhd".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <store_data> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 5
+ 8-bit register                                        : 5
+# Latches                                              : 20
+ 1-bit latch                                           : 20
+# Comparators                                          : 1
+ 11-bit comparator greater                             : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Cin>.
+The following registers are absorbed into accumulator <unit_storing_data/q>: 1 register on signal <unit_storing_data/q>.
+Unit <Cin> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 11-bit adder                                          : 1
+ 8-bit subtractor                                      : 1
+# Accumulators                                         : 1
+ 8-bit up accumulator                                  : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Comparators                                          : 1
+ 11-bit comparator greater                             : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <unit_storing_data/q_0> (without init value) has a constant value of 0 in block <Cin>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Cin> ...
+WARNING:Xst:1293 - FF/Latch <timer_3_seconds_6> has a constant value of 0 in block <Cin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <timer_3_seconds_7> has a constant value of 0 in block <Cin>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <bunz> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Cin, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Cin.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 80
+#      GND                         : 1
+#      LUT1                        : 4
+#      LUT2                        : 17
+#      LUT3                        : 9
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 13
+#      MUXCY                       : 16
+#      XORCY                       : 18
+# FlipFlops/Latches                : 57
+#      FDC                         : 39
+#      LD                          : 7
+#      LDE_1                       : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 17
+#      OBUF                        : 23
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              45  out of  18224     0%  
+ Number of Slice LUTs:                   45  out of   9112     0%  
+    Number used as Logic:                45  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     63
+   Number with an unused Flip Flop:      18  out of     63    28%  
+   Number with an unused LUT:            18  out of     63    28%  
+   Number of fully used LUT-FF pairs:    27  out of     63    42%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  41  out of    232    17%  
+    IOB Flip Flops/Latches:              12
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------+-------------------------------+-------+
+Clock Signal                                                                                | Clock buffer(FF name)         | Load  |
+--------------------------------------------------------------------------------------------+-------------------------------+-------+
+timer_3_seconds[7]_PWR_5_o_OR_18_o(timer_3_seconds[7]_PWR_5_o_OR_18_o2:O)                   | NONE(*)(timer_3_seconds_5)    | 6     |
+PWR_5_o_new_balance_check[10]_LessThan_19_o(PWR_5_o_new_balance_check[10]_LessThan_19_o11:O)| NONE(*)(new_balance_10)       | 11    |
+timer_3_seconds[7]_GND_5_o_equal_18_o(timer_3_seconds[7]_GND_5_o_equal_18_o<7>1:O)          | NONE(*)(odp)                  | 1     |
+flag_button_push(flag_button_push1:O)                                                       | NONE(*)(unit_storing_data/q_1)| 7     |
+clk                                                                                         | BUFGP                         | 32    |
+--------------------------------------------------------------------------------------------+-------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.905ns (Maximum Frequency: 525.058MHz)
+   Minimum input arrival time before clock: 5.409ns
+   Maximum output required time after clock: 4.555ns
+   Maximum combinational path delay: 5.351ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'timer_3_seconds[7]_PWR_5_o_OR_18_o'
+  Clock period: 1.905ns (frequency: 525.058MHz)
+  Total number of paths / destination ports: 36 / 6
+-------------------------------------------------------------------------
+Delay:               1.905ns (Levels of Logic = 1)
+  Source:            timer_3_seconds_5 (LATCH)
+  Destination:       timer_3_seconds_5 (LATCH)
+  Source Clock:      timer_3_seconds[7]_PWR_5_o_OR_18_o falling
+  Destination Clock: timer_3_seconds[7]_PWR_5_o_OR_18_o falling
+
+  Data Path: timer_3_seconds_5 to timer_3_seconds_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.498   1.167  timer_3_seconds_5 (timer_3_seconds_5)
+     LUT6:I0->O            1   0.203   0.000  Mmux_GND_5_o_timer_3_seconds[7]_MUX_52_o11 (GND_5_o_timer_3_seconds[7]_MUX_52_o)
+     LD:D                      0.037          timer_3_seconds_5
+    ----------------------------------------
+    Total                      1.905ns (0.738ns logic, 1.167ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'flag_button_push'
+  Clock period: 1.852ns (frequency: 539.884MHz)
+  Total number of paths / destination ports: 49 / 7
+-------------------------------------------------------------------------
+Delay:               1.852ns (Levels of Logic = 8)
+  Source:            unit_storing_data/q_1 (FF)
+  Destination:       unit_storing_data/q_7 (FF)
+  Source Clock:      flag_button_push rising
+  Destination Clock: flag_button_push rising
+
+  Data Path: unit_storing_data/q_1 to unit_storing_data/q_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.651  unit_storing_data/q_1 (unit_storing_data/q_1)
+     LUT3:I2->O            1   0.205   0.000  unit_storing_data/Maccum_q_lut<1> (unit_storing_data/Maccum_q_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  unit_storing_data/Maccum_q_cy<1> (unit_storing_data/Maccum_q_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  unit_storing_data/Maccum_q_cy<2> (unit_storing_data/Maccum_q_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  unit_storing_data/Maccum_q_cy<3> (unit_storing_data/Maccum_q_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  unit_storing_data/Maccum_q_cy<4> (unit_storing_data/Maccum_q_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  unit_storing_data/Maccum_q_cy<5> (unit_storing_data/Maccum_q_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  unit_storing_data/Maccum_q_cy<6> (unit_storing_data/Maccum_q_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  unit_storing_data/Maccum_q_xor<7> (Result<7>)
+     FDC:D                     0.102          unit_storing_data/q_7
+    ----------------------------------------
+    Total                      1.852ns (1.201ns logic, 0.651ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            unit_bounce_left/x_7 (FF)
+  Destination:       unit_bounce_left/x_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: unit_bounce_left/x_7 to unit_bounce_left/x_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  unit_bounce_left/x_7 (unit_bounce_left/x_7)
+     FDC:D                     0.102          unit_bounce_left/x_6
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PWR_5_o_new_balance_check[10]_LessThan_19_o'
+  Total number of paths / destination ports: 118 / 11
+-------------------------------------------------------------------------
+Offset:              2.650ns (Levels of Logic = 12)
+  Source:            balance<1> (PAD)
+  Destination:       new_balance_10 (LATCH)
+  Destination Clock: PWR_5_o_new_balance_check[10]_LessThan_19_o rising
+
+  Data Path: balance<1> to new_balance_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.684  balance_1_IBUF (balance_1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Madd_new_balance_check_lut<1> (Madd_new_balance_check_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Madd_new_balance_check_cy<1> (Madd_new_balance_check_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<2> (Madd_new_balance_check_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<3> (Madd_new_balance_check_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<4> (Madd_new_balance_check_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<5> (Madd_new_balance_check_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<6> (Madd_new_balance_check_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<7> (Madd_new_balance_check_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<8> (Madd_new_balance_check_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_new_balance_check_cy<9> (Madd_new_balance_check_cy<9>)
+     XORCY:CI->O           3   0.180   0.000  Madd_new_balance_check_xor<10> (new_balance_check<10>)
+     LDE_1:D                   0.037          new_balance_10
+    ----------------------------------------
+    Total                      2.650ns (1.966ns logic, 0.684ns route)
+                                       (74.2% logic, 25.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'timer_3_seconds[7]_GND_5_o_equal_18_o'
+  Total number of paths / destination ports: 118 / 1
+-------------------------------------------------------------------------
+Offset:              5.409ns (Levels of Logic = 9)
+  Source:            balance<1> (PAD)
+  Destination:       odp (LATCH)
+  Destination Clock: timer_3_seconds[7]_GND_5_o_equal_18_o falling
+
+  Data Path: balance<1> to odp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.684  balance_1_IBUF (balance_1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Madd_new_balance_check_lut<1> (Madd_new_balance_check_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Madd_new_balance_check_cy<1> (Madd_new_balance_check_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<2> (Madd_new_balance_check_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_new_balance_check_cy<3> (Madd_new_balance_check_cy<3>)
+     XORCY:CI->O           2   0.180   0.961  Madd_new_balance_check_xor<4> (new_balance_check<4>)
+     LUT5:I0->O            1   0.203   0.684  timer_3_seconds[7]_PWR_5_o_OR_18_o1_SW0 (N01)
+     LUT6:I4->O            2   0.203   0.617  timer_3_seconds[7]_PWR_5_o_OR_18_o1 (timer_3_seconds[7]_PWR_5_o_OR_18_o1)
+     LUT2:I1->O           12   0.205   0.000  PWR_5_o_new_balance_check[10]_LessThan_19_o11 (PWR_5_o_new_balance_check[10]_LessThan_19_o)
+     LD:D                      0.037          odp
+    ----------------------------------------
+    Total                      5.409ns (2.463ns logic, 2.946ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'flag_button_push'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.043ns (Levels of Logic = 1)
+  Source:            res (PAD)
+  Destination:       unit_storing_data/q_1 (FF)
+  Destination Clock: flag_button_push rising
+
+  Data Path: res to unit_storing_data/q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.222   1.391  res_IBUF (res_IBUF)
+     FDC:CLR                   0.430          unit_storing_data/q_1
+    ----------------------------------------
+    Total                      3.043ns (1.652ns logic, 1.391ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              3.043ns (Levels of Logic = 1)
+  Source:            res (PAD)
+  Destination:       unit_bounce_left/x_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: res to unit_bounce_left/x_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.222   1.391  res_IBUF (res_IBUF)
+     FDC:CLR                   0.430          unit_bounce_left/x_0
+    ----------------------------------------
+    Total                      3.043ns (1.652ns logic, 1.391ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PWR_5_o_new_balance_check[10]_LessThan_19_o'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            new_balance_10 (LATCH)
+  Destination:       new_balance<10> (PAD)
+  Source Clock:      PWR_5_o_new_balance_check[10]_LessThan_19_o rising
+
+  Data Path: new_balance_10 to new_balance<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.498   0.579  new_balance_10 (new_balance_10)
+     OBUF:I->O                 2.571          new_balance_10_OBUF (new_balance<10>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'flag_button_push'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.555ns (Levels of Logic = 2)
+  Source:            unit_storing_data/q_7 (FF)
+  Destination:       balance_7seg<7> (PAD)
+  Source Clock:      flag_button_push rising
+
+  Data Path: unit_storing_data/q_7 to balance_7seg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.755  unit_storing_data/q_7 (unit_storing_data/q_7)
+     LUT2:I0->O            1   0.203   0.579  balance_7seg<7>1 (balance_7seg_7_OBUF)
+     OBUF:I->O                 2.571          balance_7seg_7_OBUF (balance_7seg<7>)
+    ----------------------------------------
+    Total                      4.555ns (3.221ns logic, 1.334ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'timer_3_seconds[7]_GND_5_o_equal_18_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            odp (LATCH)
+  Destination:       odp (PAD)
+  Source Clock:      timer_3_seconds[7]_GND_5_o_equal_18_o falling
+
+  Data Path: odp to odp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  odp (odp_OBUF)
+     OBUF:I->O                 2.571          odp_OBUF (odp)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               5.351ns (Levels of Logic = 3)
+  Source:            center (PAD)
+  Destination:       balance_7seg<7> (PAD)
+
+  Data Path: center to balance_7seg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   0.774  center_IBUF (center_IBUF)
+     LUT2:I1->O            1   0.205   0.579  balance_7seg<7>1 (balance_7seg_7_OBUF)
+     OBUF:I->O                 2.571          balance_7seg_7_OBUF (balance_7seg<7>)
+    ----------------------------------------
+    Total                      5.351ns (3.998ns logic, 1.352ns route)
+                                       (74.7% logic, 25.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock PWR_5_o_new_balance_check[10]_LessThan_19_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+flag_button_push                  |    1.844|         |         |         |
+timer_3_seconds[7]_PWR_5_o_OR_18_o|         |    3.097|         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock flag_button_push
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk             |    3.915|         |         |         |
+flag_button_push|    1.852|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock timer_3_seconds[7]_GND_5_o_equal_18_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+flag_button_push|         |         |    4.604|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock timer_3_seconds[7]_PWR_5_o_OR_18_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+timer_3_seconds[7]_PWR_5_o_OR_18_o|         |         |    1.905|         |
+----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.15 secs
+ 
+--> 
+
+Total memory usage is 260368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

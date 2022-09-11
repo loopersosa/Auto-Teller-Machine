@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/FBFA.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/FBFA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 FBFA.ngc FBFA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FBFA_map.ncd FBFA.ngd FBFA.pcf 
+par -w -intstyle ise -ol high -mt off FBFA_map.ncd FBFA.ncd FBFA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FBFA.twx FBFA.ncd -o FBFA.twr FBFA.pcf 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/FBFA.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/FBFA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 FBFA.ngc FBFA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FBFA_map.ncd FBFA.ngd FBFA.pcf 
+par -w -intstyle ise -ol high -mt off FBFA_map.ncd FBFA.ncd FBFA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FBFA.twx FBFA.ncd -o FBFA.twr FBFA.pcf 

@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/main.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 main.ngc main.ngd  

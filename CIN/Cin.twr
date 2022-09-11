@@ -1,0 +1,474 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf
+
+Design file:              Cin.ncd
+Physical constraint file: Cin.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+down        |    1.017(R)|      FAST  |   -0.448(R)|      SLOW  |clk_BUFGP         |   0.000|
+left        |    0.725(R)|      FAST  |   -0.079(R)|      SLOW  |clk_BUFGP         |   0.000|
+res         |    1.987(R)|      SLOW  |   -0.077(R)|      SLOW  |clk_BUFGP         |   0.000|
+right       |    1.255(R)|      SLOW  |   -0.768(R)|      SLOW  |clk_BUFGP         |   0.000|
+up          |    0.621(R)|      FAST  |    0.119(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock balance<0> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         9.431(R)|      SLOW  |         4.748(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         9.431(R)|      SLOW  |         4.748(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         9.276(R)|      SLOW  |         4.669(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         9.276(R)|      SLOW  |         4.669(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.763(R)|      SLOW  |         4.986(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.763(R)|      SLOW  |         4.986(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         9.411(R)|      SLOW  |         4.789(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         9.411(R)|      SLOW  |         4.789(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.569(R)|      SLOW  |         4.871(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.620(R)|      SLOW  |         4.881(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.620(R)|      SLOW  |         4.881(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<1> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.929(R)|      SLOW  |         4.483(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.929(R)|      SLOW  |         4.483(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.774(R)|      SLOW  |         4.404(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.774(R)|      SLOW  |         4.404(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.261(R)|      SLOW  |         4.721(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.261(R)|      SLOW  |         4.721(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.909(R)|      SLOW  |         4.524(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.909(R)|      SLOW  |         4.524(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.067(R)|      SLOW  |         4.606(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.118(R)|      SLOW  |         4.616(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.118(R)|      SLOW  |         4.616(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<2> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         9.368(R)|      SLOW  |         4.777(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         9.368(R)|      SLOW  |         4.777(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         9.213(R)|      SLOW  |         4.698(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         9.213(R)|      SLOW  |         4.698(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.700(R)|      SLOW  |         5.015(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.700(R)|      SLOW  |         5.015(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         9.348(R)|      SLOW  |         4.818(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         9.348(R)|      SLOW  |         4.818(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.506(R)|      SLOW  |         4.900(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.557(R)|      SLOW  |         4.910(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.557(R)|      SLOW  |         4.910(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<3> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.955(R)|      SLOW  |         4.624(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.955(R)|      SLOW  |         4.624(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.800(R)|      SLOW  |         4.545(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.800(R)|      SLOW  |         4.545(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.287(R)|      SLOW  |         4.862(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.287(R)|      SLOW  |         4.862(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.935(R)|      SLOW  |         4.665(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.935(R)|      SLOW  |         4.665(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.093(R)|      SLOW  |         4.747(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.144(R)|      SLOW  |         4.757(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.144(R)|      SLOW  |         4.757(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<4> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         9.175(R)|      SLOW  |         4.471(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         9.175(R)|      SLOW  |         4.471(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         9.020(R)|      SLOW  |         4.392(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         9.020(R)|      SLOW  |         4.392(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.507(R)|      SLOW  |         4.709(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.507(R)|      SLOW  |         4.709(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         9.155(R)|      SLOW  |         4.512(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         9.155(R)|      SLOW  |         4.512(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.313(R)|      SLOW  |         4.594(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.364(R)|      SLOW  |         4.604(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.364(R)|      SLOW  |         4.604(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<5> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.757(R)|      SLOW  |         4.512(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.757(R)|      SLOW  |         4.512(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.602(R)|      SLOW  |         4.433(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.602(R)|      SLOW  |         4.433(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.089(R)|      SLOW  |         4.750(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.089(R)|      SLOW  |         4.750(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.737(R)|      SLOW  |         4.553(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.737(R)|      SLOW  |         4.553(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         8.895(R)|      SLOW  |         4.635(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         8.946(R)|      SLOW  |         4.645(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         8.946(R)|      SLOW  |         4.645(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<6> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.652(R)|      SLOW  |         4.493(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.652(R)|      SLOW  |         4.493(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.497(R)|      SLOW  |         4.414(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.497(R)|      SLOW  |         4.414(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         8.984(R)|      SLOW  |         4.731(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         8.984(R)|      SLOW  |         4.731(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.632(R)|      SLOW  |         4.534(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.632(R)|      SLOW  |         4.534(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         8.790(R)|      SLOW  |         4.616(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         8.841(R)|      SLOW  |         4.626(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         8.841(R)|      SLOW  |         4.626(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<7> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.569(R)|      SLOW  |         4.461(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.569(R)|      SLOW  |         4.461(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.414(R)|      SLOW  |         4.382(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.414(R)|      SLOW  |         4.382(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         8.901(R)|      SLOW  |         4.699(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         8.901(R)|      SLOW  |         4.699(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.549(R)|      SLOW  |         4.502(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.549(R)|      SLOW  |         4.502(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         8.707(R)|      SLOW  |         4.584(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         8.758(R)|      SLOW  |         4.594(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         8.758(R)|      SLOW  |         4.594(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<8> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         9.150(R)|      SLOW  |         4.987(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         9.150(R)|      SLOW  |         4.987(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.995(R)|      SLOW  |         4.908(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.995(R)|      SLOW  |         4.908(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.482(R)|      SLOW  |         5.225(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.482(R)|      SLOW  |         5.225(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         9.130(R)|      SLOW  |         5.028(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         9.130(R)|      SLOW  |         5.028(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.288(R)|      SLOW  |         5.110(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.339(R)|      SLOW  |         5.120(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.339(R)|      SLOW  |         5.120(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<9> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.862(R)|      SLOW  |         4.811(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.862(R)|      SLOW  |         4.811(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.707(R)|      SLOW  |         4.732(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.707(R)|      SLOW  |         4.732(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         9.194(R)|      SLOW  |         5.049(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         9.194(R)|      SLOW  |         5.049(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.842(R)|      SLOW  |         4.852(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.842(R)|      SLOW  |         4.852(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         9.000(R)|      SLOW  |         4.934(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         9.051(R)|      SLOW  |         4.944(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         9.051(R)|      SLOW  |         4.944(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock balance<10> to Pad
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                           | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                          | Phase  |
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+new_balance<0> |         8.199(R)|      SLOW  |         4.698(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<1> |         8.199(R)|      SLOW  |         4.698(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<2> |         8.044(R)|      SLOW  |         4.619(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<3> |         8.044(R)|      SLOW  |         4.619(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<4> |         8.531(R)|      SLOW  |         4.936(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<5> |         8.531(R)|      SLOW  |         4.936(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<6> |         8.179(R)|      SLOW  |         4.739(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<7> |         8.179(R)|      SLOW  |         4.739(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<8> |         8.337(R)|      SLOW  |         4.821(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<9> |         8.388(R)|      SLOW  |         4.831(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+new_balance<10>|         8.388(R)|      SLOW  |         4.831(R)|      FAST  |PWR_5_o_new_balance_check[10]_LessThan_19_o|   0.000|
+---------------+-----------------+------------+-----------------+------------+-------------------------------------------+--------+
+
+Clock to Setup on destination clock balance<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.319|    2.811|         |    1.589|
+balance<1>     |    0.015|    2.811|         |    1.589|
+balance<2>     |    0.293|    2.811|         |    1.589|
+balance<3>     |    0.028|    2.811|         |    1.589|
+balance<4>     |    0.342|    2.811|         |    1.589|
+balance<5>     |    0.045|    2.811|         |    1.589|
+balance<6>     |   -0.048|    2.811|         |    1.589|
+balance<7>     |   -0.094|    2.811|         |    1.589|
+balance<8>     |    0.354|    2.811|         |    1.589|
+balance<9>     |    0.133|    2.811|         |    1.589|
+balance<10>    |    0.000|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.658|    2.811|         |    1.589|
+balance<1>     |    0.280|    2.811|         |    1.589|
+balance<2>     |    0.624|    2.811|         |    1.589|
+balance<3>     |    0.293|    2.811|         |    1.589|
+balance<4>     |    0.607|    2.811|         |    1.589|
+balance<5>     |    0.310|    2.811|         |    1.589|
+balance<6>     |    0.217|    2.811|         |    1.589|
+balance<7>     |    0.171|    2.811|         |    1.589|
+balance<8>     |    0.619|    2.811|         |    1.589|
+balance<9>     |    0.398|    2.811|         |    1.589|
+balance<10>    |    0.265|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.290|    2.811|         |    1.589|
+balance<1>     |   -0.014|    2.811|         |    1.589|
+balance<2>     |    0.264|    2.811|         |    1.589|
+balance<3>     |   -0.001|    2.811|         |    1.589|
+balance<4>     |    0.313|    2.811|         |    1.589|
+balance<5>     |    0.016|    2.811|         |    1.589|
+balance<6>     |   -0.077|    2.811|         |    1.589|
+balance<7>     |   -0.123|    2.811|         |    1.589|
+balance<8>     |    0.325|    2.811|         |    1.589|
+balance<9>     |    0.104|    2.811|         |    1.589|
+balance<10>    |   -0.029|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.481|    2.811|         |    1.589|
+balance<1>     |    0.139|    2.811|         |    1.589|
+balance<2>     |    0.447|    2.811|         |    1.589|
+balance<3>     |    0.152|    2.811|         |    1.589|
+balance<4>     |    0.466|    2.811|         |    1.589|
+balance<5>     |    0.169|    2.811|         |    1.589|
+balance<6>     |    0.076|    2.811|         |    1.589|
+balance<7>     |    0.030|    2.811|         |    1.589|
+balance<8>     |    0.478|    2.811|         |    1.589|
+balance<9>     |    0.257|    2.811|         |    1.589|
+balance<10>    |    0.124|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.596|    2.811|         |    1.589|
+balance<1>     |    0.292|    2.811|         |    1.589|
+balance<2>     |    0.570|    2.811|         |    1.589|
+balance<3>     |    0.305|    2.811|         |    1.589|
+balance<4>     |    0.619|    2.811|         |    1.589|
+balance<5>     |    0.322|    2.811|         |    1.589|
+balance<6>     |    0.229|    2.811|         |    1.589|
+balance<7>     |    0.183|    2.811|         |    1.589|
+balance<8>     |    0.631|    2.811|         |    1.589|
+balance<9>     |    0.410|    2.811|         |    1.589|
+balance<10>    |    0.277|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<5>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.619|    2.811|         |    1.589|
+balance<1>     |    0.251|    2.811|         |    1.589|
+balance<2>     |    0.585|    2.811|         |    1.589|
+balance<3>     |    0.264|    2.811|         |    1.589|
+balance<4>     |    0.578|    2.811|         |    1.589|
+balance<5>     |    0.281|    2.811|         |    1.589|
+balance<6>     |    0.188|    2.811|         |    1.589|
+balance<7>     |    0.142|    2.811|         |    1.589|
+balance<8>     |    0.590|    2.811|         |    1.589|
+balance<9>     |    0.369|    2.811|         |    1.589|
+balance<10>    |    0.236|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<6>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.625|    2.811|         |    1.589|
+balance<1>     |    0.270|    2.811|         |    1.589|
+balance<2>     |    0.591|    2.811|         |    1.589|
+balance<3>     |    0.283|    2.811|         |    1.589|
+balance<4>     |    0.597|    2.811|         |    1.589|
+balance<5>     |    0.300|    2.811|         |    1.589|
+balance<6>     |    0.207|    2.811|         |    1.589|
+balance<7>     |    0.161|    2.811|         |    1.589|
+balance<8>     |    0.609|    2.811|         |    1.589|
+balance<9>     |    0.388|    2.811|         |    1.589|
+balance<10>    |    0.255|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<7>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.686|    2.811|         |    1.589|
+balance<1>     |    0.302|    2.811|         |    1.589|
+balance<2>     |    0.652|    2.811|         |    1.589|
+balance<3>     |    0.315|    2.811|         |    1.589|
+balance<4>     |    0.629|    2.811|         |    1.589|
+balance<5>     |    0.332|    2.811|         |    1.589|
+balance<6>     |    0.239|    2.811|         |    1.589|
+balance<7>     |    0.193|    2.811|         |    1.589|
+balance<8>     |    0.647|    2.811|         |    1.589|
+balance<9>     |    0.420|    2.811|         |    1.589|
+balance<10>    |    0.287|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<8>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.080|    2.811|         |    1.589|
+balance<1>     |   -0.224|    2.811|         |    1.589|
+balance<2>     |    0.054|    2.811|         |    1.589|
+balance<3>     |   -0.211|    2.811|         |    1.589|
+balance<4>     |    0.103|    2.811|         |    1.589|
+balance<5>     |   -0.194|    2.811|         |    1.589|
+balance<6>     |   -0.287|    2.811|         |    1.589|
+balance<7>     |   -0.333|    2.811|         |    1.589|
+balance<8>     |    0.115|    2.811|         |    1.589|
+balance<9>     |   -0.106|    2.811|         |    1.589|
+balance<10>    |   -0.239|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<9>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.256|    2.811|         |    1.589|
+balance<1>     |   -0.048|    2.811|         |    1.589|
+balance<2>     |    0.230|    2.811|         |    1.589|
+balance<3>     |   -0.035|    2.811|         |    1.589|
+balance<4>     |    0.279|    2.811|         |    1.589|
+balance<5>     |   -0.018|    2.811|         |    1.589|
+balance<6>     |   -0.111|    2.811|         |    1.589|
+balance<7>     |   -0.157|    2.811|         |    1.589|
+balance<8>     |    0.291|    2.811|         |    1.589|
+balance<9>     |    0.070|    2.811|         |    1.589|
+balance<10>    |   -0.063|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock balance<10>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+balance<0>     |    0.455|    2.811|         |    1.589|
+balance<1>     |    0.065|    2.811|         |    1.589|
+balance<2>     |    0.421|    2.811|         |    1.589|
+balance<3>     |    0.078|    2.811|         |    1.589|
+balance<4>     |    0.392|    2.811|         |    1.589|
+balance<5>     |    0.095|    2.811|         |    1.589|
+balance<6>     |    0.002|    2.811|         |    1.589|
+balance<7>     |   -0.044|    2.811|         |    1.589|
+balance<8>     |    0.416|    2.811|         |    1.589|
+balance<9>     |    0.183|    2.811|         |    1.589|
+balance<10>    |    0.050|    2.811|         |    1.589|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.470|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+center         |balance_7seg<1>|    6.371|
+center         |balance_7seg<2>|    6.357|
+center         |balance_7seg<3>|    6.721|
+center         |balance_7seg<4>|    6.500|
+center         |balance_7seg<5>|    6.739|
+center         |balance_7seg<6>|    6.439|
+center         |balance_7seg<7>|    7.182|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Jul 04 17:57:29 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 220 MB
+
+
+

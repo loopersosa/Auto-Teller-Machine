@@ -1,0 +1,4 @@
+vhdl work "piso.vhd"
+vhdl work "BUNZ.vhd"
+vhdl work "Cin.vhd"
+vhdl work "testbench.vhd"

@@ -1,0 +1,46 @@
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/prj/final_prj/Cin.xst" -ofn "C:/Users/Admin/Desktop/prj/final_prj/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Cin.ngc Cin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cin_map.ncd Cin.ngd Cin.pcf 
+par -w -intstyle ise -ol high -mt off Cin_map.ncd Cin.ncd Cin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Cin.ngc Cin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cin_map.ncd Cin.ngd Cin.pcf 
+par -w -intstyle ise -ol high -mt off Cin_map.ncd Cin.ncd Cin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Cin.ngc Cin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cin_map.ncd Cin.ngd Cin.pcf 
+par -w -intstyle ise -ol high -mt off Cin_map.ncd Cin.ncd Cin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Cin.ngc Cin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cin_map.ncd Cin.ngd Cin.pcf 
+par -w -intstyle ise -ol high -mt off Cin_map.ncd Cin.ncd Cin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/meht/Cin.xst" -ofn "C:/Users/ayroz/Desktop/team/meht/Cin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Cin.ngc Cin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cin_map.ncd Cin.ngd Cin.pcf 
+par -w -intstyle ise -ol high -mt off Cin_map.ncd Cin.ncd Cin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cin.twx Cin.ncd -o Cin.twr Cin.pcf 

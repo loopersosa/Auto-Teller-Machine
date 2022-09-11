@@ -1,0 +1,4 @@
+vhdl isim_temp "piso.vhd"
+vhdl isim_temp "BUNZ.vhd"
+vhdl isim_temp "Cin.vhd"
+vhdl isim_temp "cin_testbench.vhd"
