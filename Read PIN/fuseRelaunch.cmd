@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/ayroz/Desktop/team/read_pin/read_pin_tb3_isim_beh.exe" -prj "C:/Users/ayroz/Desktop/team/read_pin/read_pin_tb3_beh.prj" "work.read_pin_tb3" 

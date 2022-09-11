@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/ayroz/Desktop/team/read_pin/read_pin.xst" -ofn "C:/Users/ayroz/Desktop/team/read_pin/read_pin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 read_pin.ngc read_pin.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o read_pin_map.ncd read_pin.ngd read_pin.pcf 
+par -w -intstyle ise -ol high -mt off read_pin_map.ncd read_pin.ncd read_pin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml read_pin.twx read_pin.ncd -o read_pin.twr read_pin.pcf 

@@ -1,0 +1,2 @@
+vhdl work "read_pin.vhd"
+vhdl work "read_pin_tb.vhd"
